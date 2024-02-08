@@ -23,6 +23,8 @@
     --llavender: hsl(241, 100%, 89%); 
     --dgblue: hsl(224, 30%, 27%);
 
+    --l-dgblue: hsl(224, 30%, 27%,0.5);
+
     --paragraph: 18px
 
 }
@@ -36,6 +38,7 @@ body {
     justify-content: center;
     height: 100vh;
     font-size: var(--paragraph);
+    
 }
 
 /* reset */
@@ -49,6 +52,7 @@ h1 {
 }
 
 .card {
+    flex-wrap: wrap;
     max-width: 736px;
     border-radius: 24px;
     background-color: var(--white);
@@ -56,6 +60,8 @@ h1 {
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease; 
     
 }
 
@@ -66,6 +72,7 @@ h1 {
     height: 512px;
     text-align: center;
     box-sizing: border-box;
+    transition: all 0.1s ease; 
 }
 
 .result {
@@ -73,6 +80,7 @@ h1 {
     max-width: 368px;
     padding: 38px 60px ;
     justify-content: center;
+    transition: all 0.5s ease; 
 }
 
 .result-wrap {
@@ -119,11 +127,20 @@ p.of {
     padding: 38px;
 }
 
+.summary h1 {
+    margin-bottom: 28px;
+    text-align: left;
+}
+
 .reaction, .memory, .verbal, .visual {
     display: flex;
     flex-direction: row;
-    border-radius: 24px;
+    border-radius: 14px;
     font-size: 14px;
+    height: 55px;
+    margin-top: 17px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .reaction {
@@ -143,10 +160,54 @@ p.of {
     color: var(--cobblue);
 }
 
+.icon {
+    height: 20px;
+    margin-left:20px;
+}
+.text {
+    margin-left:20px;
+    
+}
+.total {
+    margin:auto;
+    margin-right: 20px;
+    color: var(--l-dgblue);
+}
+
+.total strong {
+    color: var(--dgblue);
+}
+
 .continue {
-    padding: 14px;
+    margin-top: 44px;
+    padding: 19px;
     flex: 1;
     background-color: var(--dgblue);
-    border-radius: 24px;
+    color: var(--white);
+    border-radius: 44px;
     border: none;
+    width: 100%;
+}
+
+.continue:hover{
+    cursor: pointer;
+    background: var(--gteal);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+    .card {
+        margin-top: -20px;
+        flex-direction: column;
+        min-width: 375px;
+    }
+    .description {
+        font-size: 15px;
+    }
+
+    .result, .summary {
+        height: auto;
+    }
 }
