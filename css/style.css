@@ -136,7 +136,7 @@ p.of {
     display: flex;
     flex-direction: row;
     border-radius: 14px;
-    font-size: 14px;
+    font-size: 18px;
     height: 55px;
     margin-top: 17px;
     justify-content: flex-start;
@@ -179,14 +179,15 @@ p.of {
 }
 
 .continue {
-    margin-top: 44px;
-    padding: 19px;
+    margin-top: 43px;
+    padding: 17px;
     flex: 1;
     background-color: var(--dgblue);
     color: var(--white);
     border-radius: 44px;
     border: none;
     width: 100%;
+    font-size: 18px;
 }
 
 .continue:hover{
