@@ -1,0 +1,124 @@
+:root{
+    --lred: hsl(0, 100%, 67%);
+    --oyellow: hsl(39, 100%, 56%);
+    --gteal: hsl(166, 100%, 37%);
+    --cobblue: hsl(234, 85%, 45%);
+
+    /* ## Gradients */
+    /* background */
+    --lsblue : hsl(252, 100%, 67%);
+    --lrblue : hsl(241, 81%, 54%);
+    /* circle */
+    --vblue : hsla(256, 72%, 46%, 1);
+    --vdblue : hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pblue: hsl(221, 100%, 96%);
+    --llavender: hsl(241, 100%, 89%); 
+    --dgblue: hsl(224, 30%, 27%);
+
+    --paragraph: 18px
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk';
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-size: var(--paragraph);
+}
+
+/* reset */
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.card {
+    max-width: 736px;
+    border-radius: 24px;
+    background-color: var(--white);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+}
+
+.result, .summary {
+    border-radius: 24px;
+    width: 368px;
+    max-width: 368px;
+    height: 512px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.result {
+    background: radial-gradient(circle at center top, var(--lsblue), var(--lrblue));
+    max-width: 368px;
+    padding: 38px 60px ;
+    justify-content: center;
+}
+
+.result-wrap {
+    background: linear-gradient(to bottom, var(--vblue), var(--vdblue));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result h1 {
+    color: var(--llavender);
+}
+
+p.result-num {
+    margin: auto;
+    font-size: 71px;
+    color: var(--white);
+    font-weight: 800;
+    margin-top: 45px;
+    margin-bottom: -7px;
+}
+p.of {
+    margin: auto;
+    margin-top: 0;
+    color: var(--pblue);
+}
+
+.result-text {
+    margin-top: 33px;
+    color: var(--white);
+}
+
+.description {
+    margin-top: 16px;
+    color: var(--llavender);
+}
+
+
+.summary {
+    padding: 38px;
+}
+
+
+
+.continue {
+    padding: 14px;
+    flex: 1;
+    background-color: var(--dgblue);
+    border-radius: 24px;
+}
